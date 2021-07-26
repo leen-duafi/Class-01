@@ -1,10 +1,14 @@
 import React from 'react';
-import HornedBeast from './HornedBeast';
+import HornedBeast from './HornedBeast'; 
+
+
 class Main extends React.Component {
     render() {
         return (
             <main>
-                <HornedBeast
+                <HornedBeast/>
+            
+                {/* <HornedBeast
                     title="UniWhal"
                     imageUrl="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
                     description="A unicorn and a narwhal nuzzling their horns"
@@ -27,6 +31,21 @@ class Main extends React.Component {
                     keyword="unicorn"
                     horns="1"
                 />
+                <HornedBeast
+                 title="UniLego"
+                 imageUrl="https://images.unsplash.com/photo-1518946222227-364f22132616?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4836a6fca62e7dce9324346bacfde085&auto=format&fit=crop&w=2534&q=80"
+                 description="Lego figurine dressed in a unicorn outfit"
+                 keyword="unilego"
+                 horns="1"
+                />
+
+                <HornedBeast
+                imageUrl="https://i.pinimg.com/736x/b4/61/06/b46106830b841017ea59870b27ec18dc--narwhals-a-unicorn.jpg"
+                title="Basically a unicorn"
+                description= "A narwhal is basically a unicorn after all, right?"
+                keyword="narwhal"
+                horns="1"
+                /> */}
 
 
 
