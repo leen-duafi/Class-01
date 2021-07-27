@@ -7,7 +7,7 @@ class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numberOfVotes: 0
+      numberOfVotes: 0 
     };
   }
 
