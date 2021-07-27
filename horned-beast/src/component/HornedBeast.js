@@ -1,5 +1,6 @@
 import React from 'react';
-import data from '../data.json';
+import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
 class HornedBeast extends React.Component {
 
 
@@ -24,22 +25,23 @@ class HornedBeast extends React.Component {
     render() {
       return (
         <div>
-          {data.map((val) =>
-            <div>
-
-              <h2> {val.title}</h2>
-              <img src={val.image_url} onClick={this.imageClick} ></img>
-              <p>{val.description}</p>
-              <p>{val.keyword}</p>
-              <p>{val.horns}</p>
-              <p>number Of Votes {this.state.numberOfVotes}</p>
-            </div>
-          )}
-
-
+          <Card style={{ width: '18rem'}}>
+            <Card.Img variant="top" src={this.props.image_url} onClick={this.imageClick} />
+            <Card.Body>
+              <Card.Title>{this.props.title}</Card.Title>
+              <Card.Text>
+                {this.props.description}
+              </Card.Text>
+              <Card.Text>
+                {this.state.numberOfVotes}
+              </Card.Text>
+              {/* <Button variant="primary">Go somewhere</Button> */}
+            </Card.Body>
+          </Card>
+          <br></br>
         </div>
-      );
-    }
+      );}
 }
+
 
 export default HornedBeast;
