@@ -14,7 +14,7 @@ class Selectedbeast extends React.Component {
     return (
       <div>
         <Modal show={this.props.showState} onHide={this.props.showState}>
-          <Card style={{ width: '18rem'}}>
+          <Card style={{ width: '31rem'}}>
             <Card.Img variant="top" src={this.props.image_url} onClick={this.imageClick} onClick={this.props.show}  />
             <Card.Body>
               <Card.Title>{this.props.title}</Card.Title>

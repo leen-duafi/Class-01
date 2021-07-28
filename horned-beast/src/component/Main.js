@@ -1,5 +1,6 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
+import Select from './Select';
 
 class Main extends React.Component {
 
@@ -8,7 +9,7 @@ class Main extends React.Component {
     return (
 
       <div>
-
+        <Select />
         {this.props.data.map((val) =>
           <HornedBeast
             title={val.title}
@@ -18,11 +19,12 @@ class Main extends React.Component {
             horns={val.horns}
             show={this.props.show}
             select={this.props.select}
-            // pass the function
+          // pass the function
           />
         )
 
         }
+
       </div>
     );
   }
