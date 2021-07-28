@@ -13,12 +13,16 @@ class HornedBeast extends React.Component {
 
     imageClick = () => {
       console.log('Click!!!!');
+      this.props.show();
       this.setState({
         numberOfVotes: this.state.numberOfVotes + 1
 
       }
       );
+
+      this.props.select(this.props.image_url,this.props.title,this.props.description);
     }
+
 
 
 
@@ -26,7 +30,7 @@ class HornedBeast extends React.Component {
       return (
         <div>
           <Card style={{ width: '18rem'}}>
-            <Card.Img variant="top" src={this.props.image_url} onClick={this.imageClick} />
+            <Card.Img variant="top" src={this.props.image_url} onClick={this.imageClick}/>
             <Card.Body>
               <Card.Title>{this.props.title}</Card.Title>
               <Card.Text>

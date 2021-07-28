@@ -1,42 +1,39 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class Selectedbeast extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-    present = () => {
-      const [show, setShow] = useState(false);
-
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
-    }
 
 
-    render() {
-        return (
-            <div>
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+  render() {
+    //console.log(this.props.showState);
+    return (
+      <div>
+        <Modal show={this.props.showState} onHide={this.props.showState}>
+          <Card style={{ width: '18rem'}}>
+            <Card.Img variant="top" src={this.props.image_url} onClick={this.imageClick} onClick={this.props.show}  />
+            <Card.Body>
+              <Card.Title>{this.props.title}</Card.Title>
+              <Card.Text>
+                {this.props.description}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.props.close}>
                             Close
-                        </Button>
-                        {/* <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button> */}
-                    </Modal.Footer>
-                </Modal>
+            </Button>
+          </Modal.Footer>
+        </Modal>
 
 
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 
 
 }
