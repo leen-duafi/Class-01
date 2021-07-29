@@ -9,13 +9,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component {
+
+ 
   constructor(props) {
     super(props);
     this.state = {
       show: false,
       title: "",
       description: '',
-      image_url: ''
+      image_url: '',
+      value: '',
       //beast object
     };
 
@@ -44,7 +47,15 @@ class App extends React.Component {
     });
 
   }
-  // function > will change state for the selected beast 
+
+  callBack=()=> {
+    this.setState({
+      value : this.event.target.value,
+    });
+    
+  } 
+
+  
 
   render() {
     return (
@@ -54,6 +65,7 @@ class App extends React.Component {
           data={data}
           show={this.showModel}
           select={this.modelBeast}
+          value={this.callBack}
           // pass function 
 
         />

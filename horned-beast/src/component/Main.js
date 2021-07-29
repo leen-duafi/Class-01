@@ -9,8 +9,13 @@ class Main extends React.Component {
     return (
 
       <div>
-        <Select/>
+        <Select
+        />
+        
         {this.props.data.map((val) =>
+        // if (val.horns === this.props.value ){
+        //   console.log('hi')}
+        
           <HornedBeast
             title={val.title}
             image_url={val.image_url}
@@ -24,7 +29,7 @@ class Main extends React.Component {
         )
 
         }
-
+      
       </div>
     );
   }

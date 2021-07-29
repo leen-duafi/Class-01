@@ -1,32 +1,26 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 
+
 export class Select extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {value:''};
-  }
-
   onChange=(event)=> {
-    this.setState({value: event.target.value});
+    this.setState({ value: parseInt(event.target.value)});
+    console.log('hi');
     // selectedHorns = event.target.value;
-    console.log(event.target.value,this.props.data);
-  }
-
+    console.log(event.target.value);
+  } 
 
   render() {
     return (
       <div>
-        <h3>choose how many horns you want to see </h3>
-        <Form.Select aria-label="Default select example">
-          <Form.Control as="select" custom onChange={this.onChange}>
-
-          </Form.Control>
-          <option>Open this select menu</option>
+        <p>choose how many horns you want to see </p>
+        <Form.Select aria-label="Default select example" custom onChange={(event =>this.onChange(event))}>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
+          <option value="100">hunder</option>
+          <option value="">all</option>
         </Form.Select>
 
         <br></br>
