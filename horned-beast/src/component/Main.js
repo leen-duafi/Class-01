@@ -9,7 +9,7 @@ class Main extends React.Component {
     return (
 
       <div>
-        <Select />
+        <Select/>
         {this.props.data.map((val) =>
           <HornedBeast
             title={val.title}

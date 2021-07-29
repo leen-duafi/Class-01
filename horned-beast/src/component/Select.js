@@ -3,9 +3,15 @@ import Form from 'react-bootstrap/Form';
 
 export class Select extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {value:''};
+  }
+
   onChange=(event)=> {
+    this.setState({value: event.target.value});
     // selectedHorns = event.target.value;
-    console.log(event.target.value);
+    console.log(event.target.value,this.props.data);
   }
 
 
