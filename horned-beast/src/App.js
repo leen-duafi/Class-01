@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component {
 
  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +19,7 @@ class App extends React.Component {
       title: "",
       description: '',
       image_url: '',
-      value: '',
+      value:0,
       //beast object
     };
 
@@ -48,11 +49,13 @@ class App extends React.Component {
 
   }
 
-  callBack=()=> {
+  callBack=(value)=> {
     this.setState({
-      value : this.event.target.value,
-    });
+      value :value,
+    }
     
+    );
+    console.log(this.state.value) ;
   } 
 
   
@@ -60,12 +63,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>{this.state.value}</h1>
         <Header />
         <Main
           data={data}
           show={this.showModel}
           select={this.modelBeast}
           value={this.callBack}
+          hornedNumber={this.state.value}
           // pass function 
 
         />

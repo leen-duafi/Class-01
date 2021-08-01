@@ -4,11 +4,16 @@ import Form from 'react-bootstrap/Form';
 
 export class Select extends Component {
 
+  constructor(props){
+    super(props);
+    this.state={
+      value:0,
+    } ;
+  }
+
+
   onChange=(event)=> {
-    this.setState({ value: parseInt(event.target.value)});
-    console.log('hi');
-    // selectedHorns = event.target.value;
-    console.log(event.target.value);
+    this.props.changeValue(event.target.value);
   } 
 
   render() {
@@ -22,7 +27,7 @@ export class Select extends Component {
           <option value="100">hunder</option>
           <option value="">all</option>
         </Form.Select>
-
+        <h1> {this.state.value}</h1>
         <br></br>
       </div>
     );
